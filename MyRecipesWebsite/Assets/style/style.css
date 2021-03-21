@@ -1,0 +1,234 @@
+html{
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background-image: url("wood.jpg");
+  background-repeat: repeat;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 62px;
+  color: aliceblue;
+  padding: 0;
+  margin: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+label {
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #464646;
+}
+
+input {
+  font: inherit;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.2rem;
+  color: #383838;
+}
+
+input:focus {
+  outline: none;
+  background: #fff1c4;
+}
+
+#entry-text{
+  text-align: center;
+  align-self: center;
+  width: 30rem;
+  margin: 2rem auto;
+  max-width: 80%;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+#container {
+  width: 1000px;
+  height: 100vh;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1000;
+}
+
+#title {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px #000000;
+  color: aliceblue;
+  text-align: center;
+  background-image: url("titlePicture.jpg");
+  background-size: cover;
+  mask-repeat: no-repeat;
+}
+
+.recipes {
+  display: inline-block;
+  width: 250px;
+  height: 300px;
+}
+
+.paragraphs {
+  margin: 0px;
+  padding: 0px;
+}
+
+.picture{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 10%;
+  max-height: 10%;
+}
+
+.picture:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
+.modal{
+  position: fixed;
+  background: white;
+  display: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  z-index: 100;
+  width: 40%;
+  top: 30vh;
+}
+
+.modal.visible{
+  display: block;
+}
+
+.modal .modal_content{
+  padding: 1rem;
+}
+
+.modal .modal_actions {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn{
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #00329e;
+  background: #00329e;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+.btn:hover,
+.btn:active {
+  background: #f67722;
+  border-color: #f67722;
+}
+
+.btn_passive {
+  color: #00329e;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.btn_passive:hover,
+.btn_passive:active {
+  background: #aec6f8;
+}
+
+.btn_danger {
+  background: #d30808;
+  color: white;
+  border-color: #d30808;
+}
+
+.btn_danger:hover,
+.btn_danger:active {
+  background: #ff3217;
+  border-color: #ff3217;
+}
+
+.recipes_element{
+  margin: 2rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  display: flex;
+}
+
+.recipes_title {
+  flex: 1;
+  padding: 1rem;
+}
+
+.recipes_ingredients {
+  flex: 1;
+  padding: 1rem;
+  align-self: flex-start;
+}
+
+.recipes_directions {
+  flex: 2;
+  padding: 1rem;
+}
+
+.recipes_image{
+  flex: 1;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+}
+
+.recipes_image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#backdrop{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+#backdrop.visible {
+  display: block;
+  pointer-events: all;
+}
+
+#add_modal .modal_content {
+  display: flex;
+  flex-direction: column;
+}
+
+#recipes_list{
+  list-style: none;
+  width: 1000px;
+  margin: 1rem auto;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}

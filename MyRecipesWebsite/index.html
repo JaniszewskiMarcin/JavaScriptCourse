@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Recipes</title>
+    <script src="Assets/js/app.js" defer></script>
+    <link rel="stylesheet" href="Assets/style/style.css" type="text/css" />
+  </head>
+  <body>
+    <div id="backdrop"></div>
+    <div class="modal" id="add_modal">
+      <div class="modal_content">
+        <label for="recipeTitle">Recipe Title</label>
+        <input type="text" name="recipeTitle" id="recipeTitle"/>
+        <label for="ingredients">Ingredients</label>
+        <input type="text" name="ingredients" id="ingredients" style="padding-bottom: 4rem;"/>
+        <label for="directions">Directions</label>
+        <input type="text" name="directions" id="directions" style="padding-bottom: 4rem;"/>
+        <label for="image_url">Pictures URL</label>
+        <input type="text" name="image_url" id="image_url"/>
+      </div>
+      <div class="modal_actions">
+        <button class="btn btn_passive">Cancel</button>
+        <button class="btn btn_success">Add</button>
+      </div>
+    </div>
+      <div id="container">
+        <div id="title">
+          <h1>My Recipes</h1>
+          <p class="paragraphs">
+            Add your recipes and share it with your friends online!
+          </p>
+        </div>
+        <main>
+          <ul id="recipes_list">
+          </ul>
+          <section id="entry-text">
+            <p class="paragraphs">Your personal recipes database!</p>
+          </section>
+          <img
+            id="add-button"
+            src="Assets/style/plus.png"
+            alt="Recipe add button."
+            class="picture"
+          />
+        </main>
+        
+  </body>
+</html>
